@@ -49,14 +49,14 @@
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (term) {
     var lines = [
-      ['cmd', '$ ck plan --project your-idea'],
+      ['cmd', '$ sv plan --project your-idea'],
       ['', '  scope ....... agreed'],
-      ['cmd', '$ ck build --secure'],
+      ['cmd', '$ sv build --secure'],
       ['', '  tests ....... <span class="ok">passing</span>'],
       ['', '  audit ....... <span class="ok">clean</span>'],
-      ['cmd', '$ ck deploy --env production'],
+      ['cmd', '$ sv deploy --env production'],
       ['', '  <span class="ok">✓</span> live in <span class="ac">production</span>'],
-      ['cmd', '$ ck support --mode always-on']
+      ['cmd', '$ sv support --mode always-on']
     ];
     var html = lines.map(function (l) { return '<span class="' + l[0] + '">' + l[1] + '</span>'; });
     if (reduce) {

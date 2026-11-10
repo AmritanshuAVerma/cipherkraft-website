@@ -1,6 +1,6 @@
 <?php
 /**
- * CipherKraft contact form handler (Hostinger shared hosting, PHP mail()).
+ * Suverma contact form handler (Hostinger shared hosting, PHP mail()).
  *
  * Setup on Hostinger:
  *  1. Create a mailbox on the domain (e.g. noreply@suverma.com) in hPanel > Emails.
@@ -59,7 +59,7 @@ if (!in_array($service, $allowed, true)) {
 }
 
 $subject = 'Website enquiry: ' . $service . ' — ' . $name;
-$body  = "New enquiry from the CipherKraft website\n";
+$body  = "New enquiry from the Suverma website\n";
 $body .= "----------------------------------------\n";
 $body .= "Name:    {$name}\n";
 $body .= "Email:   {$email}\n";
@@ -70,7 +70,7 @@ $body .= "Time:    " . gmdate('Y-m-d H:i') . " UTC\n\n";
 $body .= $message . "\n";
 
 $headers = [
-    'From: CipherKraft Website <' . FROM_ADDRESS . '>',
+    'From: Suverma Website <' . FROM_ADDRESS . '>',
     'Reply-To: ' . $email,
     'MIME-Version: 1.0',
     'Content-Type: text/plain; charset=UTF-8',

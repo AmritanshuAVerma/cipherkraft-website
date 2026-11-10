@@ -1,6 +1,6 @@
 <?php
 /**
- * Suverma contact form handler (Hostinger, PHP mail()).
+ * SUVERMA GROUP contact form handler (Hostinger, PHP mail()).
  *
  * Setup on Hostinger:
  *  1. Create a mailbox on the domain (e.g. noreply@suverma.com) in hPanel > Emails.
@@ -90,7 +90,7 @@ if ($name === '' || $message === '' || !filter_var($email, FILTER_VALIDATE_EMAIL
 
 // Which group company the enquiry is for (fixed list; anything else is "general").
 $companies = [
-    'general'   => 'Suverma Group (general)',
+    'general'   => 'SUVERMA GROUP (general)',
     'altevance' => 'Altevance Global (software)',
     'dost'      => 'Dost Initiative (counselling)',
     'lux'       => 'Lux Social (community)',
@@ -98,7 +98,7 @@ $companies = [
 $company = $companies[$companyKey] ?? $companies['general'];
 
 $subject = 'Website enquiry: ' . $company . ' — ' . $name;
-$body  = "New enquiry from the Suverma Group website\n";
+$body  = "New enquiry from the SUVERMA GROUP website\n";
 $body .= "----------------------------------------\n";
 $body .= "Name:    {$name}\n";
 $body .= "Email:   {$email}\n";
@@ -108,7 +108,7 @@ $body .= "Time:    " . gmdate('Y-m-d H:i') . " UTC\n\n";
 $body .= $message . "\n";
 
 $headers = [
-    'From: Suverma Group Website <' . FROM_ADDRESS . '>',
+    'From: SUVERMA GROUP Website <' . FROM_ADDRESS . '>',
     'Reply-To: ' . $email,
     'MIME-Version: 1.0',
     'Content-Type: text/plain; charset=UTF-8',

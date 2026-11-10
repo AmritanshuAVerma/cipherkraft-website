@@ -301,3 +301,4 @@ h2 { font-size: clamp(32px, 4vw, 46px); }
   .cta-band { padding: 32px 24px; }
   .cta-band .btn { width: 100%; }
 }
+.eyebrow .caps { text-transform: none; letter-spacing: .06em; }

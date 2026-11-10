@@ -1,6 +1,6 @@
-# Suverma Group website
+# SUVERMA GROUP website
 
-Website for Suverma Group, a Mumbai-based group of companies:
+Website for SUVERMA GROUP, a Mumbai-based group of companies:
 
 - **Altevance Global** — software (launching soon)
 - **Dost Initiative** — counselling and guidance
@@ -24,7 +24,7 @@ Hosted on Hostinger, intended for `https://suverma.com/`.
 | `contact.php` | Contact form handler, sends enquiries by email |
 | `404.html` | Not-found page |
 | `.htaccess` | Security headers, blocked paths, caching, compression |
-| `logo.png`, `favicon.png`, `icon-192.png` | Suverma Group logo and icons |
+| `logo.png`, `favicon.png`, `icon-192.png` | SUVERMA GROUP logo and icons |
 | `logo-altevance.png`, `logo-dost.svg`, `logo-lux.svg` | Company logos. The two SVG logos are also pasted inline into the pages so their text uses the site font; edit both places |
 | `robots.txt`, `sitemap.xml`, `.well-known/security.txt` | Search engine and security contact files |
 

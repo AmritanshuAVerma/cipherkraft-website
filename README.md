@@ -1,6 +1,12 @@
-# Suverma website
+# Suverma Group website
 
-Company website for Suverma, an IT services firm based in Mumbai. It is a single-page static site (HTML, CSS, vanilla JavaScript) with a small PHP handler for the contact form. There is no build step and no dependencies.
+Website for Suverma Group, a Mumbai-based group of companies:
+
+- **Altevance Global** — software (launching soon)
+- **Dost Initiative** — counselling and guidance
+- **Lux Social** — community events and meetups
+
+Static site (HTML, CSS, vanilla JavaScript) with a small PHP handler for the contact form. There is no build step and no dependencies.
 
 Hosted on Hostinger, intended for `https://suverma.com/`.
 
@@ -8,7 +14,10 @@ Hosted on Hostinger, intended for `https://suverma.com/`.
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | The page: hero, services, approach, about, FAQ, contact |
+| `index.html` | Group home: intro, the three companies, about, contact form |
+| `altevance.html` | Altevance Global: services, approach, FAQ |
+| `dost.html` | Dost Initiative: what it helps with, how it works |
+| `lux.html` | Lux Social: what it hosts, how to join |
 | `styles.css` | All styling (colors and fonts are variables at the top) |
 | `script.js` | Mobile menu, scroll animations, terminal animation, form validation |
 | `head.js` | One-liner loaded before first paint to enable scroll animations |
@@ -17,6 +26,10 @@ Hosted on Hostinger, intended for `https://suverma.com/`.
 | `.htaccess` | Security headers, blocked paths, caching, compression |
 | `logo.png`, `favicon.png`, `icon-192.png` | Logo and icons |
 | `robots.txt`, `sitemap.xml`, `.well-known/security.txt` | Search engine and security contact files |
+
+The header and footer are repeated in each page. A change to navigation must be made in all four HTML files.
+
+Company pages link to the form as `./?company=altevance#contact` (or `dost`, `lux`), which preselects the company in the dropdown.
 
 ## Run locally
 
@@ -51,7 +64,7 @@ Hostinger rejects mail whose sender is not on a domain hosted in the account.
 
 ## Editing notes
 
-- **Caching:** CSS and JS are cached by browsers for 7 days. After changing `styles.css`, `script.js`, `head.js` or an image, bump the `?v=` number on its link in `index.html` and `404.html`.
-- **Domain:** `sitemap.xml`, `robots.txt`, `security.txt` and the canonical link in `index.html` all point at `https://suverma.com/`. Update them if the address changes.
+- **Caching:** CSS and JS are cached by browsers for 7 days. After changing `styles.css`, `script.js`, `head.js` or an image, bump the `?v=` number on its link in every HTML page.
+- **Domain:** `sitemap.xml`, `robots.txt`, `security.txt` and the canonical link in each HTML page all point at `https://suverma.com/`. Update them if the address changes.
 - **Colors:** the palette lives in the `:root` block at the top of `styles.css`.
 - **New external resources:** anything loaded from another domain must be added to the Content Security Policy in `.htaccess` or the browser will block it.

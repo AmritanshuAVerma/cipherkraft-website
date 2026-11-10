@@ -79,8 +79,7 @@ function line(string $key, int $max): string {
 
 $name    = line('name', 100);
 $email   = line('email', 150);
-$company = line('company', 150);
-$service = line('service', 60);
+$companyKey = line('company', 20);
 $message = (string)($_POST['message'] ?? '');
 $message = preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]+/u', '', $message) ?? '';
 $message = mb_substr(trim($message), 0, 5000);
@@ -89,27 +88,27 @@ if ($name === '' || $message === '' || !filter_var($email, FILTER_VALIDATE_EMAIL
     back('error=invalid');
 }
 
-$allowed = [
-    'Custom software development', 'Cloud & DevOps', 'Cybersecurity', 'Data & AI',
-    'Support & maintenance', 'IT consulting', 'Something else',
+// Which group company the enquiry is for (fixed list; anything else is "general").
+$companies = [
+    'general'   => 'Suverma Group (general)',
+    'altevance' => 'Altevance Global (software)',
+    'dost'      => 'Dost Initiative (counselling)',
+    'lux'       => 'Lux Social (community)',
 ];
-if (!in_array($service, $allowed, true)) {
-    $service = 'Something else';
-}
+$company = $companies[$companyKey] ?? $companies['general'];
 
-$subject = 'Website enquiry: ' . $service . ' — ' . $name;
-$body  = "New enquiry from the Suverma website\n";
+$subject = 'Website enquiry: ' . $company . ' — ' . $name;
+$body  = "New enquiry from the Suverma Group website\n";
 $body .= "----------------------------------------\n";
 $body .= "Name:    {$name}\n";
 $body .= "Email:   {$email}\n";
-$body .= "Company: " . ($company !== '' ? $company : '-') . "\n";
-$body .= "Service: {$service}\n";
+$body .= "For:     {$company}\n";
 $body .= "IP:      {$ip}\n";
 $body .= "Time:    " . gmdate('Y-m-d H:i') . " UTC\n\n";
 $body .= $message . "\n";
 
 $headers = [
-    'From: Suverma Website <' . FROM_ADDRESS . '>',
+    'From: Suverma Group Website <' . FROM_ADDRESS . '>',
     'Reply-To: ' . $email,
     'MIME-Version: 1.0',
     'Content-Type: text/plain; charset=UTF-8',

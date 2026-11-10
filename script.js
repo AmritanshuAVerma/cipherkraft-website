@@ -74,6 +74,8 @@
   // Contact form: show result from ?sent=1 / ?error=..., and validate before submit
   var form = document.querySelector('.form');
   var notice = form.querySelector('.notice');
+  // Page-load timestamp for the server-side bot timing check
+  form.elements.ts.value = Math.floor(Date.now() / 1000);
   var show = function (msg, ok) {
     notice.textContent = msg;
     notice.className = 'notice ' + (ok ? 'ok' : 'err');

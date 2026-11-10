@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <script>document.documentElement.classList.add('js');</script>
+  <script src="head.js"></script>
 
   <script type="application/ld+json">
   {
@@ -58,6 +58,7 @@
         <a href="#services">Services</a>
         <a href="#approach">Approach</a>
         <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact" class="btn btn-sm">Get in touch</a>
       </nav>
     </div>
@@ -191,11 +192,43 @@
       </div>
     </section>
 
+    <!-- FAQ -->
+    <section id="faq" class="section alt">
+      <div class="wrap faq-wrap">
+        <div class="section-head">
+          <p class="eyebrow mono">04 / faq</p>
+          <h2>Common questions.</h2>
+        </div>
+        <div class="faq">
+          <details class="reveal">
+            <summary>How do we get started?</summary>
+            <p>Send a message through the form below. We set up a short call to understand what you need, then share a written scope with timeline and cost before any work begins.</p>
+          </details>
+          <details class="reveal">
+            <summary>Can you take over software someone else built?</summary>
+            <p>Yes. We start with a review of the existing code and infrastructure, tell you plainly what state it is in, and then take on fixes, upgrades and ongoing maintenance.</p>
+          </details>
+          <details class="reveal">
+            <summary>Who owns the code?</summary>
+            <p>You do. Source code, documentation and account credentials are handed over to you — there is no lock-in.</p>
+          </details>
+          <details class="reveal">
+            <summary>How do you handle security?</summary>
+            <p>It is part of design and development from the first day: least-privilege access, reviewed dependencies, encrypted connections and secrets kept out of code. Security reviews of existing systems are also available on their own.</p>
+          </details>
+          <details class="reveal">
+            <summary>Do you work with clients outside Mumbai?</summary>
+            <p>Yes. We work remotely with clients anywhere, with regular updates and a single point of contact.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <!-- CONTACT -->
     <section id="contact" class="section contact">
       <div class="wrap contact-inner">
         <div>
-          <p class="eyebrow mono">04 / contact</p>
+          <p class="eyebrow mono">05 / contact</p>
           <h2>Have a project in mind?</h2>
           <p class="sub">Tell us what you're building or what needs fixing. We'll reply within one business day.</p>
           <a class="mail mono" href="mailto:amritanshuverma1993@gmail.com">amritanshuverma1993@gmail.com</a>
@@ -231,6 +264,7 @@
           <label class="hp" aria-hidden="true">Website
             <input name="website" type="text" tabindex="-1" autocomplete="off">
           </label>
+          <input type="hidden" name="ts" value="">
           <button class="btn" type="submit">Send message</button>
         </form>
       </div>
@@ -240,6 +274,7 @@
   <footer class="footer">
     <div class="wrap footer-inner">
       <span>© <span id="yr">2026</span> Suverma. All rights reserved.</span>
+      <a href="mailto:amritanshuverma1993@gmail.com">Contact</a>
       <a href="#top">Back to top ↑</a>
     </div>
   </footer>

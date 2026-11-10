@@ -83,7 +83,7 @@
   if (params.get('sent') === '1') {
     show('Thanks — your message has been sent. We will get back to you within one business day.', true);
   } else if (params.has('error')) {
-    show('Sorry, your message could not be sent. Please check the fields, or email us directly at cipherkraft@outlook.com.', false);
+    show('Sorry, your message could not be sent. Please check the fields, or email us directly at amritanshuverma1993@gmail.com.', false);
   }
   if (params.has('sent') || params.has('error')) {
     history.replaceState(null, '', window.location.pathname + '#contact');

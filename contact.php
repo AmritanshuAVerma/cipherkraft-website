@@ -8,7 +8,7 @@
  *  2. Set FROM_ADDRESS below to that mailbox.
  */
 
-const TO_ADDRESS   = 'cipherkraft@outlook.com';
+const TO_ADDRESS   = 'amritanshuverma1993@gmail.com';
 const FROM_ADDRESS = 'noreply@suverma.com';
 const BACK_URL     = './';
 

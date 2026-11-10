@@ -264,10 +264,14 @@ h2 { font-size: clamp(32px, 4vw, 46px); }
 .company:nth-child(3) .ico { background: #fae8c4; }
 .company:nth-child(3) .ico svg { stroke: #a8660f; }
 .company-kind { color: var(--accent); font-size: 12.5px; letter-spacing: .04em; margin: 22px 0 6px; }
-.company h3 { font-family: var(--serif); font-size: 27px; font-weight: 600; margin-bottom: 10px; }
+.company h3 { margin: 0; line-height: 0; }
+.co-logo { display: block; height: 58px; width: auto; max-width: 100%; }
+.hero-logo { margin-bottom: 26px; }
+.hero-logo .co-logo { height: 84px; }
+.hero-center .hero-logo .co-logo { margin: 0 auto; }
 .company p { color: var(--muted); font-size: 15.5px; margin: 0; }
 .company .more { margin-top: auto; padding-top: 24px; color: var(--accent); font-weight: 600; font-size: 15px; }
-.badge { position: absolute; top: 20px; right: 20px; font-size: 12px; font-weight: 600; padding: 4px 11px; border-radius: 999px; }
+.badge { display: inline-block; margin-left: 8px; font: 600 12px var(--sans); letter-spacing: 0; padding: 3px 10px; border-radius: 999px; vertical-align: 1px; }
 .badge.soon, .hero-tags .tag-soon { background: #fae8c4; color: #7a4a06; border-color: #f0d49a; }
 
 /* three-step variant, note box, call-to-action band */
@@ -292,6 +296,8 @@ h2 { font-size: clamp(32px, 4vw, 46px); }
 }
 @media (max-width: 720px) {
   .hero-center { padding: 64px 0 80px; }
+  .hero-logo .co-logo { height: 64px; }
+  .co-logo { height: 50px; }
   .cta-band { padding: 32px 24px; }
   .cta-band .btn { width: 100%; }
 }

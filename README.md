@@ -24,7 +24,8 @@ Hosted on Hostinger, intended for `https://suverma.com/`.
 | `contact.php` | Contact form handler, sends enquiries by email |
 | `404.html` | Not-found page |
 | `.htaccess` | Security headers, blocked paths, caching, compression |
-| `logo.png`, `favicon.png`, `icon-192.png` | Logo and icons |
+| `logo.png`, `favicon.png`, `icon-192.png` | Suverma Group logo and icons |
+| `logo-altevance.png`, `logo-dost.svg`, `logo-lux.svg` | Company logos. The two SVG logos are also pasted inline into the pages so their text uses the site font; edit both places |
 | `robots.txt`, `sitemap.xml`, `.well-known/security.txt` | Search engine and security contact files |
 
 The header and footer are repeated in each page. A change to navigation must be made in all four HTML files.

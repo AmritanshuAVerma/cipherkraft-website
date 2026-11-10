@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150" role="img" aria-label="Dost Initiative">
+  <defs>
+    <linearGradient id="dost-a" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffb347"/>
+      <stop offset="1" stop-color="#f4623a"/>
+    </linearGradient>
+    <linearGradient id="dost-b" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6d3fd6"/>
+      <stop offset="1" stop-color="#2f8cf0"/>
+    </linearGradient>
+  </defs>
+  <!-- D-shaped speech bubble with a tail -->
+  <path fill="url(#dost-a)" fill-rule="evenodd" d="M18 12H66a56 56 0 0 1 0 112H52L18 146Z M46 42V96H66a27 27 0 0 0 0-54Z"/>
+  <!-- second, smaller bubble: the friend answering -->
+  <path fill="url(#dost-b)" d="M84 78h34a22 22 0 0 1 0 44h-4l16 20-34-20H84a22 22 0 0 1 0-44Z"/>
+  <circle cx="88" cy="100" r="4" fill="#fff"/>
+  <circle cx="101" cy="100" r="4" fill="#fff"/>
+  <circle cx="114" cy="100" r="4" fill="#fff"/>
+  <rect x="168" y="22" width="3" height="106" fill="#111a4a"/>
+  <text x="194" y="92" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-weight="700" font-size="84" letter-spacing="-3" fill="#111a4a">Dost</text>
+  <text x="197" y="130" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-weight="500" font-size="23" letter-spacing="11" fill="#4b5563">INITIATIVE</text>
+</svg>

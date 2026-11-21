@@ -34,13 +34,15 @@ Company pages link to the form as `./?company=altevance#contact` (or `dost`, `lu
 
 ## Run locally
 
-Any static file server works:
+Use PHP's built-in server so the contact form works too (PHP 8.x with the `mbstring` extension enabled):
 
 ```bash
-python -m http.server 8000
+php -S localhost:8000
 ```
 
-Then open `http://localhost:8000/`. The contact form needs PHP, so it only works on the host (or under `php -S localhost:8000`).
+Then open `http://localhost:8000/`. Under `php -S` the contact form does not send email: it prints the message it would have sent to the server console. `.htaccess` is ignored locally, so security headers and blocked paths only apply on the host.
+
+Without PHP, any static file server works for the pages (`python -m http.server 8000`), but the form will not.
 
 ## Deploy
 

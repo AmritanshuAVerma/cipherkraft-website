@@ -115,7 +115,14 @@ $headers = [
 ];
 
 $encodedSubject = '=?UTF-8?B?' . base64_encode($subject) . '?=';
-$ok = mail(TO_ADDRESS, $encodedSubject, $body, implode("\r\n", $headers), '-f' . FROM_ADDRESS);
+
+if (PHP_SAPI === 'cli-server') {
+    // Local development (php -S): no mail server, so print the email to the server console instead.
+    error_log("\n--- contact.php (local, not sent) ---\nTo: " . TO_ADDRESS . "\nSubject: {$subject}\n" . implode("\n", $headers) . "\n\n{$body}--- end ---");
+    $ok = true;
+} else {
+    $ok = mail(TO_ADDRESS, $encodedSubject, $body, implode("\r\n", $headers), '-f' . FROM_ADDRESS);
+}
 
 if ($ok) {
     $hits[] = $now;

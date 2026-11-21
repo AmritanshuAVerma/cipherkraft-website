@@ -2,7 +2,7 @@
 
 Website for SUVERMA GROUP, a Mumbai-based group of companies:
 
-- **Altevance Global** — software (launching soon)
+- **Altevance Global** — software
 - **Dost Initiative** — counselling and guidance
 - **Lux Social** — community events and meetups
 
